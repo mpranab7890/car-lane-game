@@ -8,17 +8,23 @@
   height: 100%; */
   display: none;
   position: absolute;
-  right: 20px;
+  top: 1%;
+  left: 32%;
 }
 
 .score-text,
 .high-score-text {
-  font-size: 40px;
+  font-size: 30px;
+  font-weight: bold;
 }
 
-.score,
-.high-score {
+.score {
+  color: red;
   font-weight: bolder;
+}
+
+.high-score {
+  color: blue;
 }
 
 .game-over-menu,
