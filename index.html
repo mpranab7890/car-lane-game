@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car Lane Game</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <body>
+    <div class="score-panel">
+      <div class="score-text">Score: <span class="score"></span></div>
+      <div class="high-score-text">
+        High score: <span class="high-score"></span>
+      </div>
+    </div>
+
+    <div class="game-start-menu">
+      <h1>HIGHWAY RIDER EXTREME</h1>
+      <p>Use keys A and D to switch between left and right lane.</p>
+      <div class="game-start-menu-enter">Press Enter to play</div>
+    </div>
+
+    <div class="game-over-menu">
+      GAME OVER !! <br />
+      <span>Press Enter to play again.</span>
+    </div>
+    <canvas id="canvas-1"> </canvas>
+    <script src="./js/canvas.js"></script>
+    <script src="./js/road.js"></script>
+    <script src="./js/my-car.js"></script>
+    <script src="./js/utils.js"></script>
+    <script src="./js/obstacle.js"></script>
+    <script src="./js/event-handler.js"></script>
+  </body>
+</html>

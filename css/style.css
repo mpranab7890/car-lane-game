@@ -1,0 +1,62 @@
+#canvas-1 {
+  display: block;
+  margin: 0px auto;
+}
+
+.score-panel {
+  /* width: 26.24%;
+  height: 100%; */
+  display: none;
+  position: absolute;
+  right: 20px;
+}
+
+.score-text,
+.high-score-text {
+  font-size: 40px;
+}
+
+.score,
+.high-score {
+  font-weight: bolder;
+}
+
+.game-over-menu,
+.game-start-menu {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  font-weight: bolder;
+  text-align: center;
+}
+
+.game-over-menu {
+  display: none;
+  font-size: 50px;
+  color: red;
+}
+
+.game-start-menu {
+  padding-top: 20px;
+  height: 100%;
+  font-size: 30px;
+  border: 2px black;
+}
+
+.game-start-menu p {
+  margin-top: 100px;
+}
+
+.game-over-menu span {
+  margin-top: 50px;
+  font-size: 35px;
+  color: blue;
+}
+
+.game-start-menu-enter {
+  margin-top: 50px;
+  font-size: 50px;
+  color: blue;
+}
