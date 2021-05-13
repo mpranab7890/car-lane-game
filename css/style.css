@@ -71,8 +71,8 @@
   color: blue;
 }
 
-.game-start-menu-enter {
+.game-start-menu-enter p {
   margin-top: 50px;
-  font-size: 50px;
+  font-size: 40px;
   color: blue;
 }
