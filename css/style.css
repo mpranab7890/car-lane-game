@@ -4,12 +4,22 @@
 }
 
 .score-panel {
-  /* width: 26.24%;
-  height: 100%; */
   display: none;
   position: absolute;
   top: 1%;
   left: 32%;
+}
+
+.bullet-panel {
+  display: none;
+  position: absolute;
+  top: 1%;
+  right: 32%;
+}
+
+.bullet {
+  height: 50px;
+  width: 50px;
 }
 
 .score-text,
@@ -52,7 +62,7 @@
 }
 
 .game-start-menu p {
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 .game-over-menu span {

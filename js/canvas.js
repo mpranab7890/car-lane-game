@@ -8,6 +8,7 @@ var gameState = 0;
 var startMenu = document.querySelector('.game-start-menu');
 var endMenu = document.querySelector('.game-over-menu');
 var scorePanel = document.querySelector('.score-panel');
+var bulletPanel = document.querySelector('.bullet-panel');
 var highScore = document.querySelector('.high-score');
 
 if (localStorage.getItem('high-score') === null) {

@@ -1,6 +1,5 @@
 const OBSTACLE_WIDTH = 105;
 const OBSTACLE_HEIGHT = 218;
-var obstacleList = [];
 var obstacleX = [110, 310, 510];
 var scoreElement = document.querySelector('.score');
 var score = 0;
@@ -29,6 +28,18 @@ function Obstacle(laneNumber, y, obstacleImageNumber) {
   };
 }
 
+window.addEventListener('keypress', (e) => {
+  if (
+    gameState == 1 &&
+    myCar.bullets > 0 &&
+    (e.key === ' ' || e.key === 'Spacebar')
+  ) {
+    bulletElement[3 - myCar.bullets].style.visibility = 'hidden';
+    myCar.bullets -= 1;
+    myCar.shoot();
+  }
+});
+
 var createObstacles = () => {
   var noOfObstacles = Math.random() > 0.9 ? 1 : 2;
   for (var i = 0; i < noOfObstacles; i++) {
@@ -48,6 +59,9 @@ var createObstacles = () => {
 var animateObstacles = () => {
   // var score = score;
   //   console.log(myCar);
+  if (obstacleList.length == 0) {
+    createObstacles();
+  }
   obstacleList.forEach((obstacle) => {
     myCar.checkCollision(obstacleList, score);
     obstacle.updateObstaclePosition();
@@ -57,7 +71,7 @@ var animateObstacles = () => {
     });
     score += initialObstacles - obstacleList.length;
     scoreElement.innerHTML = score;
-    if (score != 0 && score % 15 == 0 && !speedIncreased) {
+    if (score != 0 && score % 10 == 0 && !speedIncreased) {
       road.movementSpeed += 1;
       speedIncreased = true;
     }
@@ -69,5 +83,4 @@ var animateObstacles = () => {
   requestAnimationFrame(animateObstacles);
 };
 
-createObstacles();
 animateObstacles();
